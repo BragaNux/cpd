@@ -19,16 +19,33 @@
 
 #- Código em Python
 
-def insertion_sort(data):
-    n = len(data)
-    for j in range(1, n):
-        tmp = data[j]
-        i = j - 1
-        while i >= 0 and tmp < data[i]:
-            data[i + 1] = data[i]
-            i = i - 1
-        data[i + 1] = tmp
+def ordenar_insercao(lista):
+    comprimento = len(lista)
+    for k in range(1, comprimento):
+        valor_atual = lista[k]
+        j = k - 1
+        while j >= 0 and valor_atual < lista[j]:
+            lista[j + 1] = lista[j]
+            j = j - 1
+        lista[j + 1] = valor_atual
 
-data = int(input("Informe os valores pra lista"))
-insertion_sort(data)
-print(data)
+
+#já ordenados
+numeros_ordenados = [10, 20, 30, 40, 50]
+ordenar_insercao(numeros_ordenados)
+print("Valores já ordenados:", numeros_ordenados)
+
+#ordem inversa
+numeros_invertidos = [100, 90, 80, 70, 60]
+ordenar_insercao(numeros_invertidos)
+print("Valores na ordem inversa:", numeros_invertidos)
+
+#duplicados
+numeros_duplicados = [15, 25, 15, 35, 25]
+ordenar_insercao(numeros_duplicados)
+print("Valores duplicados:", numeros_duplicados)
+
+#aleatórios
+numeros_aleatorios = [42, 7, 25, 89, 14]
+ordenar_insercao(numeros_aleatorios)
+print("Valores aleatórios:", numeros_aleatorios)
