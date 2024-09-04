@@ -1,0 +1,4 @@
+O algoritmo Insertion Sort possui comportamento melhor do que o método da bolha
+(Bubblesort). Esta afirmação é:
+
+    Verdadeiro

@@ -1,0 +1,20 @@
+Heapify:
+
+    Essa função é responsável por transformar uma sub-árvore em um heap máximo, 
+    onde o valor do nó pai é maior do que os valores de seus filhos. O processo é repetido de forma 
+    recursiva se o maior valor não estiver na raiz.
+
+Construção do heap:
+
+    O array é convertido em um heap máximo, começando do meio da lista e indo até o início. 
+    Isso garante que todas as sub-árvores sejam heapificadas antes de serem manipuladas no nível superior.
+
+Extração do elemento máximo:
+
+    O maior elemento (que é a raiz do heap) é movido para o final do array. Em seguida, 
+    o heap é ajustado para manter sua propriedade de heap máximo, e o processo se repete para o restante do array.
+
+Complexidade:
+
+    A complexidade de tempo do HeapSort é 𝑂(𝑛log𝑛)
+    O(nlogn), tanto no melhor quanto no pior caso, o que o torna eficiente e estável em termos de desempenho.
